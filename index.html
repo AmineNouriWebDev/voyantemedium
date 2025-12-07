@@ -1,250 +1,366 @@
-
 <!DOCTYPE html>
-<html dir="ltr" lang="fr-FR">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10" />
-<title>Medium Yoga Reiki Magnetiseuse Energéticienne</title>
-<!--[if lt IE 9]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Medium Yoga Reiki Magnetiseuse Energéticienne</title>
+    <meta
+      name="description"
+      content="Voyance médiumnique, soins holistiques, reiki, magnétisme et yoga. Thérapies énergétiques pour l'harmonie du corps et de l'esprit."
+    />
 
-<link rel='stylesheet' id='vintage-camera-googlefonts-css'  href='http://fonts.googleapis.com/css?family=Sansita+One%7CTrochut%3A400%2C700%2C400italic%7CAlegreya%3A400italic%2C700italic%2C400%2C700&#038;ver=3.4.2' type='text/css' media='all' />
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cosmic: {
+                50: "#f0f9ff",
+                100: "#e0f2fe",
+                200: "#bae6fd",
+                300: "#7dd3fc",
+                400: "#38bdf8",
+                500: "#0ea5e9",
+                600: "#0284c7",
+                700: "#0369a1",
+                800: "#075985",
+                900: "#0c4a6e",
+              },
+            },
+            fontFamily: {
+              orbitron: ["Orbitron", "sans-serif"],
+              inter: ["Inter", "sans-serif"],
+              lato: ["Lato", "sans-serif"],
+            },
+            animation: {
+              float: "float 5s ease-in-out infinite",
+              "pulse-glow": "pulse-glow 2s ease-in-out infinite",
+            },
+          },
+        },
+      };
+    </script>
 
+    <!-- Style personnalisé -->
+    <link rel="stylesheet" href="./css/style.css" />
 
-<link rel='stylesheet' id='style-css'  href='./css/style.css' type='text/css' media='all' />
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-<meta name="generator" content="WordPress 3.4.2" />
+    <!-- Calendly -->
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
+  </head>
+  <body class="bg-slate-900 text-slate-200 font-lato">
+    <!-- Container Three.js -->
+    <div id="three-container"></div>
 
-<link rel="stylesheet" href="./css/flexslider.css">
+    <!-- Navigation -->
+    <nav class="glass-panel sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <!-- Logo / Titre -->
+          <div class="mb-4 md:mb-0">
+            <h1
+              class="font-orbitron text-2xl md:text-3xl bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent neon-text"
+            >
+              VoyanteMedium.be
+            </h1>
+          </div>
 
-</head>
+          <!-- Menu principal -->
+          <div class="flex flex-wrap justify-center gap-4 md:gap-8">
+            <a
+              href="index.html"
+              class="text-cyan-300 hover:text-cyan-100 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-slate-800/50"
+              >Accueil</a
+            >
+            <a
+              href="qui-suis-je.html"
+              class="text-cyan-300 hover:text-cyan-100 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-slate-800/50"
+              >Qui suis-je ?</a
+            >
+            <a
+              href="la-pension.html"
+              class="text-cyan-300 hover:text-cyan-100 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-slate-800/50"
+              >Soins holistiques</a
+            >
+            <a
+              href="la-parenthese.html"
+              class="text-cyan-300 hover:text-cyan-100 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-slate-800/50"
+              >La Parenthese</a
+            >
+            <a
+              href="reglementation.html"
+              class="text-cyan-300 hover:text-cyan-100 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-slate-800/50"
+              >Contact</a
+            >
 
-<body class="home page page-id-4 page-template page-template-template-index-php custom-background style-k1000 color-dark">
-<div id="page" class="hfeed site page4">
-		<header id="masthead" class="site-header" role="banner">
-		<hgroup>
+            <!-- Bouton Réserver -->
+            <button
+              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/votre-lien'})"
+              class="bg-gradient-to-r from-purple-600 to-cyan-500 text-white font-semibold px-6 py-3 rounded-full hover:from-purple-700 hover:to-cyan-600 transition-all transform hover:scale-105 shadow-lg shadow-purple-500/30"
+            >
+              Réserver
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-			<h1 class="site-title">
-				<a href="index.html" title="Medium Yoga Reiki Magnetiseuse Energéticienne" rel="home">Medium Yoga Reiki Magnetiseuse Energéticienne</a>
-			</h1>
+    <!-- Hero Section -->
+    <header
+      class="relative min-h-screen flex items-center justify-center overflow-hidden"
+    >
+      <div class="container mx-auto px-4 py-20 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h2 class="font-orbitron text-4xl md:text-6xl lg:text-7xl mb-6">
+            <span
+              class="bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent neon-text"
+            >
+              Éveil Spirituel & Énergie Cosmique
+            </span>
+          </h2>
 
-		
-		  	<div class="ribbon-left"></div>
-		  	<div id="header_nav" class="blackbar">
-				<nav role="navigation" class="site-navigation main-navigation">
-					<div id="header-menu" class="menu-main_menu-container">
-						<ul id="menu-main_menu" class="menu">
-							<li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4 current_page_item menu-item-18"><a href="index.html">Accueil</a></li>
-							<li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17"><a href="qui-suis-je.html">Qui suis-je ?</a></li>
-							<li id="menu-item-67" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67"><a href="la-pension.html">Soins holistiques</a></li>
-							<li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68"><a href="la-parenthese.html">La Parenthese</a></li>
-							<li id="menu-item-14" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14"><a href="reglementation.html">Contact</a></li>
-						</ul>
-					</div>					
-				</nav>		  		
-		  	</div>
-		  	<div class="ribbon-right"></div>
-		</hgroup>
-	</header><!-- #masthead .site-header -->
+          <p class="text-xl md:text-2xl text-cyan-100 mb-8 max-w-2xl mx-auto">
+            Voyance médiumnique • Soins holistiques • Reiki • Magnétisme • Yoga
+          </p>
 
-	<div id="main">
-		<div id="primary" class="site-content">
-			<div id="content" role="main">
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="la-pension.html"
+              class="glass-card px-8 py-4 text-lg font-semibold text-center hover:scale-105 transition-transform"
+            >
+              Découvrir les soins
+            </a>
+            <button
+              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/votre-lien'})"
+              class="bg-gradient-to-r from-purple-600 to-cyan-500 text-white font-semibold px-8 py-4 text-lg rounded-full hover:from-purple-700 hover:to-cyan-600 transition-all transform hover:scale-105"
+            >
+              Prendre rendez-vous
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
 
-				
-<article id="post-4" class="post-4 page type-page status-publish hentry">
-	
-	<div class="entry-content">
+    <!-- Contenu principal -->
+    <main class="container mx-auto px-4 py-16">
+      <!-- Section Image principale -->
+      <section class="mb-20">
+        <div class="max-w-4xl mx-auto">
+          <div class="neon-border p-2">
+            <img
+              src="./imageAccueil.jpg"
+              alt="Énergie et spiritualité"
+              class="w-full h-auto rounded-lg"
+            />
+          </div>
+        </div>
+      </section>
 
-		<div class="flexslider">
-	    <!-- <ul class="slides">
-	    	<li>
-	    		<img src="./css/img/slider/image001.jpg" alt="">
-	    	</li>
-	    	<li>
-	    		<img src="./css/img/slider/image002.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image003.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image004.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image005.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image006.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image007.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image008.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image009.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image010.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image011.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image012.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image013.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image014.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image015.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image016.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image017.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image018.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image019.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image020.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image021.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image022.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image023.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image024.jpg" alt="">
-	    	</li>
-			<li>
-	    		<img src="./css/img/slider/image025.jpg" alt="">
-	    	</li>
-	    </ul>
-		-->
-		<img class="centrerimage" src="./imageAccueil.jpg">
-	  </div>
+      <!-- Section Déontologie -->
+      <section class="mb-20">
+        <div class="glass-card p-8 md:p-12">
+          <h2 class="font-orbitron text-3xl md:text-4xl mb-8 text-cyan-300">
+            Déontologie & Éthique
+          </h2>
 
-	  <div class="intro">
-	  	<h3>Déontologie</h3>
-		<p>L’ensemble des thérapies que je pratique n'est en aucun cas un remplacement des traitements traditionnels de médecine.</br>
-		Il faut le considérer comme une aide supplémentaire. </br>
-		En conséquence il revient à ma patientèle de prendre l'entière responsabilité de la constatation de l'amélioration de son état et de le faire vérifier si besoin est par son médecin habituel car je ne suis pas habilitée pour le faire. </br>
-		Je fais partie du monde des médecines dites  « parallèles », non conventionnées, non reconnues par l’univers de la sécurité sociale, mutuelle….</p>
-		<p>
-		Toutes les traditions ont enseigné l’importance de la Nature. Nos psychés sont unies à elle et aux animaux de ce monde depuis l’origine des temps. <br/>
-		À intervalles réguliers et pendant toute notre vie, la Nature s’efforce de nous faire reprendre conscience de nos attaches, à la faveur de rencontres animales.<br/>
-		En apprenant à rendre la communication avec les animaux plus intelligible, nous enrichissons nos perceptions et ouvrons de nouvelles fenêtres sur la vie. <br/>
-		Alors, la signification cachée de ces rencontres s’éclaire !<br/><br/>
-		
-		</p>
-	  </div>
-	  
-		<div style="text-align:center; font-size:20px;">
-		<p style="text-align:center; font-size:30px;">
-		<strong> Me contacter directement ! </strong></span><br/><br/>
-		<a href="mailto:fb799591@skynet.be"  target="_blank" title="Mail Voyante"><strong>M'envoyer un email</strong></a><br/><br/>
-		
-		</p>
-		<p style="text-align:center; font-size:20px;">
-		<strong> Vous me trouverez également ici ! </strong></span><br/><br/>
-		<a href="https://www.mondestin.be/"  target="_blank" title="patricia Millis"><strong>MonDestin.be</strong></a><br/><br/>
-		<a href="http://patriciamillis.com/" target="_blank" title="Mon destin"><strong>Site de Patricia Millis Astrologie</strong></a>
-		</p>
-		
-	</div>
-		
-<!--
-		<a href="qui-suis-je.html">
-<div class="vignette">
-<h3>Qui suis-je ?</h3>
-<ul>
-<li>Mon histoire</li>
-<li>Ma passion</li>
-<li>Mon Projet</li>
-</ul>
-</div>
-</a>
-<a href="la-pension.html">
-<div class="vignette">
-<h3>La pension</h3>
-<ul>
-<li>Ambiance</li>
-<li>Horaire type</li>
-<li>Tarifs</li>
-<li>Contact</li>
-</ul>
-</div>
-</a>
-<a href="reglementation.html">
-<div class="vignette last">
-<h3>Réservation</h3>
-<ul>
-<li>Formulaire</li>
-<li>Informations et déroulements</li>
-<li>condition de payement</li>
-</ul>
-</div>
-</a><!-->
-	</div><!-- .entry-content -->
+          <div class="space-y-6 text-lg leading-relaxed">
+            <p>
+              L'ensemble des thérapies que je pratique n'est en aucun cas un
+              remplacement des traitements traditionnels de médecine. Il faut le
+              considérer comme une aide supplémentaire.
+            </p>
 
+            <p>
+              En conséquence, il revient à ma patientèle de prendre l'entière
+              responsabilité de la constatation de l'amélioration de son état et
+              de le faire vérifier si besoin est par son médecin habituel car je
+              ne suis pas habilitée pour le faire.
+            </p>
 
-	<footer class="entry-meta">
-		
+            <p>
+              Je fais partie du monde des médecines dites « parallèles », non
+              conventionnées, non reconnues par l'univers de la sécurité
+              sociale, mutuelle…
+            </p>
 
-	</footer><!-- #entry-meta -->
-</article><!-- #post-4 -->
-					
+            <p
+              class="italic text-cyan-100 mt-8 pt-6 border-t border-cyan-800/30"
+            >
+              Toutes les traditions ont enseigné l'importance de la Nature. Nos
+              psychés sont unies à elle et aux animaux de ce monde depuis
+              l'origine des temps. À intervalles réguliers et pendant toute
+              notre vie, la Nature s'efforce de nous faire reprendre conscience
+              de nos attaches, à la faveur de rencontres animales. En apprenant
+              à rendre la communication avec les animaux plus intelligible, nous
+              enrichissons nos perceptions et ouvrons de nouvelles fenêtres sur
+              la vie. Alors, la signification cachée de ces rencontres s'éclaire
+              !
+            </p>
+          </div>
+        </div>
+      </section>
 
-				
-			</div><!-- #content -->
-		</div><!-- #primary .site-content -->
+      <!-- Section Contacts & Liens -->
+      <section class="mb-20">
+        <div class="grid md:grid-cols-2 gap-8">
+          <!-- Contact direct -->
+          <div class="glass-card p-8">
+            <h3 class="font-orbitron text-2xl mb-6 text-cyan-300">
+              Me contacter directement !
+            </h3>
 
-			<div class="ribbon-left"></div>
-	<div class="blackbar">
-	<nav role="navigation" id="nav-below" class="site-navigation paging-navigation">
-		<h1 class="assistive-text">Post navigation</h1>
+            <div class="space-y-4">
+              <a
+                href="mailto:fb799591@skynet.be"
+                class="block bg-gradient-to-r from-slate-800 to-slate-900 p-4 rounded-lg border border-cyan-800/30 hover:border-cyan-500/50 transition-colors group"
+              >
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-full bg-cyan-900/50 flex items-center justify-center group-hover:bg-cyan-800 transition-colors"
+                  >
+                    <span class="text-cyan-300">@</span>
+                  </div>
+                  <span class="text-lg font-medium">M'envoyer un email</span>
+                </div>
+              </a>
+            </div>
+          </div>
 
-		
-	</nav><!-- #nav-below -->
-	</div><!-- .blackbar -->
-	<div class="ribbon-right"></div>
-		</div><!-- #main -->
+          <!-- Autres plateformes -->
+          <div class="glass-card p-8">
+            <h3 class="font-orbitron text-2xl mb-6 text-purple-300">
+              Vous me trouverez également ici !
+            </h3>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			
-						<!--<a href="http://www.carolinemoore.net" target="_blank" title="Vintage Camera Theme by Caroline Moore"><img src="./css/img/cameraicon.png" alt="Vintage Camera Theme by Caroline Moore" /></a>
-		<img src="./css/img/copyright.png" alt="Copyright 2012 Pension chiens" title="Copyright 2012 Pension chiens" />
-		<a href="http://www.wordpress.org" target="_blank" title="Powered by WordPress">-->
-		</div><!-- .site-info -->
-	</footer><!-- .site-footer .site-footer -->
-</div><!-- #page .hfeed .site -->
+            <div class="space-y-4">
+              <a
+                href="https://www.mondestin.be/"
+                target="_blank"
+                class="block bg-gradient-to-r from-slate-800 to-slate-900 p-4 rounded-lg border border-purple-800/30 hover:border-purple-500/50 transition-colors group"
+              >
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-full bg-purple-900/50 flex items-center justify-center group-hover:bg-purple-800 transition-colors"
+                  >
+                    <span class="text-purple-300">✦</span>
+                  </div>
+                  <span class="text-lg font-medium">MonDestin.be</span>
+                </div>
+              </a>
 
-	
+              <a
+                href="http://patriciamillis.com/"
+                target="_blank"
+                class="block bg-gradient-to-r from-slate-800 to-slate-900 p-4 rounded-lg border border-purple-800/30 hover:border-purple-500/50 transition-colors group"
+              >
+                <div class="flex items-center gap-3">
+                  <div
+                    class="w-10 h-10 rounded-full bg-purple-900/50 flex items-center justify-center group-hover:bg-purple-800 transition-colors"
+                  >
+                    <span class="text-purple-300">♆</span>
+                  </div>
+                  <span class="text-lg font-medium"
+                    >Site de Patricia Millis Astrologie</span
+                  >
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
 
-<script type='text/javascript' src='http://localhost:8888/wp-content/themes/vintage-camera/js/small-menu.js?ver=20120206'></script>
+    <!-- Footer -->
+    <footer class="glass-panel mt-20 border-t border-slate-800">
+      <div class="container mx-auto px-4 py-8">
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Copyright -->
+          <div class="text-center md:text-left">
+            <div
+              class="flex items-center justify-center md:justify-start gap-3 mb-4"
+            >
+              <img
+                src="./css/img/cameraicon.png"
+                alt="Vintage Camera Theme"
+                class="w-8 h-8"
+              />
+              <img
+                src="./css/img/copyright.png"
+                alt="Copyright"
+                class="w-8 h-8"
+              />
+            </div>
+            <p class="text-slate-400">
+              © 2012 - 2024 Medium Yoga Reiki Magnetiseuse Energéticienne
+            </p>
+          </div>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-        <script src="./js/jquery.flexslider-min.js"></script>
-        <script type="text/javascript">
-        $(window).load(function() {
-			$('.flexslider').flexslider();
-		});
-        </script>
-</body>
+          <!-- Navigation rapide -->
+          <div class="text-center">
+            <h4 class="font-orbitron text-lg mb-4 text-cyan-300">Navigation</h4>
+            <div class="flex flex-col gap-2">
+              <a
+                href="index.html"
+                class="text-slate-400 hover:text-cyan-300 transition-colors"
+                >Accueil</a
+              >
+              <a
+                href="qui-suis-je.html"
+                class="text-slate-400 hover:text-cyan-300 transition-colors"
+                >Qui suis-je ?</a
+              >
+              <a
+                href="la-pension.html"
+                class="text-slate-400 hover:text-cyan-300 transition-colors"
+                >Soins holistiques</a
+              >
+              <a
+                href="la-parenthese.html"
+                class="text-slate-400 hover:text-cyan-300 transition-colors"
+                >La Parenthese</a
+              >
+              <a
+                href="reglementation.html"
+                class="text-slate-400 hover:text-cyan-300 transition-colors"
+                >Contact</a
+              >
+            </div>
+          </div>
+
+          <!-- Contact -->
+          <div class="text-center md:text-right">
+            <h4 class="font-orbitron text-lg mb-4 text-cyan-300">Contact</h4>
+            <p class="text-slate-400 mb-2">0472/913553</p>
+            <p class="text-slate-400">8h à 21h</p>
+          </div>
+        </div>
+
+        <!-- Powered by -->
+        <div class="text-center mt-8 pt-8 border-t border-slate-800">
+          <p class="text-slate-500 text-sm">
+            © 2025 voyante medium. Tous droits réservés.designed by
+            <a href="https://maxsolving.com/" target="_blank">
+              maxsolving.com</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="./js/three-scene.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
 </html>

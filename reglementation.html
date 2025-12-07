@@ -1,149 +1,466 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="fr-FR">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=10" />
-<title>Contact</title>
-<link rel="profile" href="http://gmpg.org/xfn/11" />
-<link rel="pingback" href="http://localhost:8888/xmlrpc.php" />
-<!--[if lt IE 9]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+<html lang="fr" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Contact & Rendez-vous - Medium Yoga Reiki Magnetiseuse Energéticienne
+    </title>
+    <meta
+      name="description"
+      content="Prenez rendez-vous pour une consultation de voyance, magnétisme, reiki ou yoga. Contactez-moi au 0472/913553 ou par email."
+    />
 
-<link rel='stylesheet' id='vintage-camera-googlefonts-css'  href='http://fonts.googleapis.com/css?family=Sansita+One%7CTrochut%3A400%2C700%2C400italic%7CAlegreya%3A400italic%2C700italic%2C400%2C700&#038;ver=3.4.2' type='text/css' media='all' />
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              cosmic: {
+                50: "#f0f9ff",
+                100: "#e0f2fe",
+                200: "#bae6fd",
+                300: "#7dd3fc",
+                400: "#38bdf8",
+                500: "#0ea5e9",
+                600: "#0284c7",
+                700: "#0369a1",
+                800: "#075985",
+                900: "#0c4a6e",
+              },
+            },
+            fontFamily: {
+              orbitron: ["Orbitron", "sans-serif"],
+              inter: ["Inter", "sans-serif"],
+              lato: ["Lato", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
 
+    <!-- Style personnalisé -->
+    <link rel="stylesheet" href="./css/style.css" />
 
-<link rel='stylesheet' id='style-css'  href='./css/style.css' type='text/css' media='all' />
+    <!-- Calendly -->
+    <link
+      href="https://assets.calendly.com/assets/external/widget.css"
+      rel="stylesheet"
+    />
+    <script
+      src="https://assets.calendly.com/assets/external/widget.js"
+      type="text/javascript"
+      async
+    ></script>
+  </head>
+  <body class="bg-slate-900 text-slate-200 font-lato">
+    <!-- Navigation -->
+    <nav class="glass-panel sticky top-0 z-50">
+      <div class="container mx-auto px-4 py-4">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <!-- Logo / Titre -->
+          <div class="mb-4 md:mb-0">
+            <h1
+              class="font-orbitron text-2xl md:text-3xl bg-gradient-to-r from-cyan-400 to-purple-400 bg-clip-text text-transparent neon-text"
+            >
+              VoyanteMedium.be
+            </h1>
+          </div>
 
-<meta name="generator" content="WordPress 3.4.2" />
+          <!-- Menu principal -->
+          <div class="flex flex-wrap justify-center gap-4 md:gap-8">
+            <a
+              href="index.html"
+              class="text-cyan-300 hover:text-cyan-100 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-slate-800/50"
+              >Accueil</a
+            >
+            <a
+              href="qui-suis-je.html"
+              class="text-cyan-300 hover:text-cyan-100 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-slate-800/50"
+              >Qui suis-je ?</a
+            >
+            <a
+              href="la-pension.html"
+              class="text-cyan-300 hover:text-cyan-100 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-slate-800/50"
+              >Soins holistiques</a
+            >
+            <a
+              href="la-parenthese.html"
+              class="text-cyan-300 hover:text-cyan-100 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-slate-800/50"
+              >La Parenthese</a
+            >
+            <a
+              href="reglementation.html"
+              class="text-cyan-300 hover:text-cyan-100 font-medium transition-colors px-3 py-2 rounded-lg hover:bg-slate-800/50"
+              >Contact</a
+            >
 
-</head>
+            <!-- Bouton Réserver -->
+            <button
+              onclick="Calendly.initPopupWidget({url: 'https://calendly.com/votre-lien'})"
+              class="bg-gradient-to-r from-purple-600 to-cyan-500 text-white font-semibold px-6 py-3 rounded-full hover:from-purple-700 hover:to-cyan-600 transition-all transform hover:scale-105 shadow-lg shadow-purple-500/30"
+            >
+              Réserver
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
 
-<body class="page page-id-12 page-template-default custom-background style-k1000 color-dark">
-<div id="page" class="hfeed site page12">
-		<header id="masthead" class="site-header" role="banner">
-		<hgroup>
+    <!-- Hero Section -->
+    <header class="relative py-20 overflow-hidden">
+      <div
+        class="absolute inset-0 bg-gradient-to-b from-slate-900 via-purple-900/20 to-slate-900"
+      ></div>
+      <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center">
+          <h1 class="font-orbitron text-4xl md:text-6xl mb-6">
+            <span
+              class="bg-gradient-to-r from-cyan-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent"
+            >
+              Contact & Rendez-vous
+            </span>
+          </h1>
+          <p class="text-xl text-cyan-100">
+            Prenez rendez-vous pour votre consultation ou séance de soin
+          </p>
+        </div>
+      </div>
+    </header>
 
-						<h1 class="site-title">
-				<a href="index.html" title="Medium Yoga Reiki Magnetiseuse Energéticienne" rel="home">Medium Yoga Reiki Magnetiseuse Energéticienne</a>
-			</h1>
+    <!-- Contenu principal -->
+    <main class="container mx-auto px-4 py-8">
+      <div class="grid lg:grid-cols-2 gap-8">
+        <!-- Section Calendly -->
+        <section>
+          <div class="glass-card p-6 h-full">
+            <h2 class="font-orbitron text-3xl mb-6 text-cyan-300">
+              Réserver en ligne
+            </h2>
 
+            <p class="text-lg mb-6">
+              Sélectionnez le type de consultation qui vous convient et
+              choisissez un créneau disponible directement en ligne.
+            </p>
 
-		  	<div class="ribbon-left"></div>
-		  	<div id="header_nav" class="blackbar">
-				<nav role="navigation" class="site-navigation main-navigation">
-					<div id="header-menu" class="menu-main_menu-container"><ul id="menu-main_menu" class="menu"><li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-4 current_page_item menu-item-18"><a href="index.html">Accueil</a></li>
-<li id="menu-item-17" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17"><a href="qui-suis-je.html">Qui suis-je ?</a></li>
-<li id="menu-item-67" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67"><a href="la-pension.html">Soins holistiques</a></li>
-							<li id="menu-item-68" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-68"><a href="la-parenthese.html">La Parenthese</a></li>
-<li id="menu-item-14" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-14"><a href="reglementation.html">Contact</a></li>
-</ul></div>
-				</nav>
-		  	</div>
-		  	<div class="ribbon-right"></div>
-		</hgroup>
-	</header><!-- #masthead .site-header -->
+            <!-- Widget Calendly -->
+            <div
+              class="calendly-inline-widget"
+              data-url="https://calendly.com/votre-lien"
+              style="min-height: 700px"
+            ></div>
+          </div>
+        </section>
 
-	<div id="main">
-		<div id="primary" class="site-content">
-			<div id="content" role="main">
+        <!-- Section Informations & Contact -->
+        <section>
+          <!-- Coordonnées -->
+          <div class="glass-card p-8 mb-8">
+            <h2 class="font-orbitron text-3xl mb-6 text-purple-300">
+              Mes Coordonnées
+            </h2>
 
+            <div class="space-y-6">
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-cyan-900/50 flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-cyan-300 text-xl">📍</span>
+                </div>
+                <div>
+                  <h3 class="font-orbitron text-lg text-cyan-300 mb-1">
+                    Cabinet de consultation
+                  </h3>
+                  <p class="text-lg">
+                    CENTRE CREYDA -
+                    <a
+                      href="https://maps.app.goo.gl/G9rRUZm54mv6UwiZ6"
+                      class="text-cyan-400 hover:text-cyan-300 underline transition-colors"
+                    >
+                      Av. Général Médecin Derache 106, 1050 Ixelles
+                    </a>
+                  </p>
+                </div>
+              </div>
 
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-purple-900/50 flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-purple-300 text-xl">📞</span>
+                </div>
+                <div>
+                  <h3 class="font-orbitron text-lg text-purple-300 mb-1">
+                    Téléphone
+                  </h3>
+                  <p class="text-2xl font-semibold text-white">0472/913553</p>
+                  <p class="text-slate-300">De 8h à 21h</p>
+                </div>
+              </div>
 
-<article id="post-12" class="post-12 page type-page status-publish hentry">
-	<header class="entry-header">
-				<h1 class="entry-title">Contact</h1>
-	</header><!-- .entry-header -->
+              <div class="flex items-start gap-4">
+                <div
+                  class="w-12 h-12 rounded-full bg-cyan-900/50 flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-cyan-300 text-xl">✉️</span>
+                </div>
+                <div>
+                  <h3 class="font-orbitron text-lg text-cyan-300 mb-1">
+                    Email
+                  </h3>
+                  <a
+                    href="mailto:fb799591@skynet.be"
+                    class="text-2xl font-semibold text-cyan-400 hover:text-cyan-300 transition-colors"
+                  >
+                    fb799591@skynet.be
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
 
-	<div class="entry-content">
-		
-  <p class="style1"> 
+          <!-- Tarifs & Informations -->
+          <div class="glass-card p-8">
+            <h2 class="font-orbitron text-3xl mb-6 text-cyan-300">
+              Tarifs & Informations
+            </h2>
 
-			<a href="mailto:fb799591@skynet.be" class="style1"><strong><strong>ME CONTACTER PAR MAIL</strong></a><br />
+            <div class="space-y-6 text-lg">
+              <div class="glass-card p-4">
+                <h3 class="font-orbitron text-lg text-purple-300 mb-2">
+                  Consultation de voyance Médiumnitée
+                </h3>
+                <p class="text-white font-semibold">50 euros pour 1h</p>
+              </div>
 
-          <p class="style1"><br />
-<p>
-	Pas de surprise en mon cabinet, chaque consultation, travail reflètent d’une transparence évidente :
-	<ul>
-		<li>Le tarif pour une consultation complète de voyance Médiumnitée est de 50 euros pour 1h </li>
-		<li>Le Prix de la consultation de magnétisme/reiki/rituels est à votre libre appréciation, mais pas en-dessous de 40 €/heure vu l’énergie et l’implication demandées dans mes travaux.</li>
+              <div class="glass-card p-4">
+                <h3 class="font-orbitron text-lg text-purple-300 mb-2">
+                  Consultation de magnétisme/reiki/rituels
+                </h3>
+                <p class="text-white font-semibold">
+                  À votre libre appréciation, mais pas en-dessous de 40 €/heure
+                </p>
+              </div>
 
-		</br>Pour les gens émanant du CPAS, chômeur, en invalidité j’applique un tarif ‘social dégressif ’cas par cas.</br>
-		</br>En effet Le Christ à dit à ses apôtres : Partez sur les chemins, portez la bonne parole, guérissez les malades, pour cela vous ne demanderez rien, car l'ouvrier a le droit à son entretien. </br>
-		</br>C'est pour cette raison que je ne vends pas ce que je reçois mais j'accepte de recevoir ce qu'on me donne pour vivre.</br></br>
+              <div
+                class="bg-gradient-to-r from-slate-800/50 to-slate-900/50 p-4 rounded-lg border border-cyan-800/30"
+              >
+                <h3 class="font-orbitron text-lg text-cyan-300 mb-2">
+                  Tarif social dégressif
+                </h3>
+                <p>
+                  Pour les gens émanant du CPAS, chômeur, en invalidité
+                  j'applique un tarif 'social dégressif' cas par cas.
+                </p>
+              </div>
 
- 
-		<li>Pour l’élaboration de chaque travail spécifique un devis détaillé vous sera remis.</li>
-		<li>N’oubliez pas qu’en venant en mon cabinet vous faire du bien, vous soigner, vous participez au bien-être des animaux de notre ASBL, donc vous faites du bien à vous – même, aux animaux et à la nature aussi.  Car la totalité des soins prescrits est reversée sur le compte Holistic pet.  C’est donc pour cela que souvent lors de notre collaboration de travail de guérison émotionnelle, spirituelle, physique je demande de boire l’eau de ma source revitalisée, remagnétisée par mes soins et de passer à un mode alimentaire « sans souffrance animale, sans tuerie de la conscience, de la chair » sans acide donc basiquement dit non carné.</li>
-		<li>N’oublions pas que les acides (viandes, charcuteries,…..) fabriquent votre futur cancer ! Comme : </li>
-	</ul>
-</p>
-<strong>
-<!--
-<p>LES CÉRÉALES RAFFINÉES-LE SUCRE ET LES ALIMENTS SUCRÉS-LE SEL-LES LAITAGES-LES ALIMENTS FRITS-LA VIANDE ROUGE-LES CHARCUTERIES-</p>
-<p>Les protecteurs : l’ail-les petits fruits rouges-LES CAROTÉNOÏDES-L’HUILE OLIVE-LE THÉ VERT, POUR APAISER L’ÂME ... ET LE CORPS-UNE POIGNÉE DE NOIX PAR JOUR, ÉLOIGNE LE MÉDECIN POUR TOUJOURS-GRAINES ET GRAINS</p>
-<p>-LE VIN ROUGE, UN BREUVAGE DIVIN-LE SOJA, UNE LÉGUMINEUSE ANTICANCÉREUSE-LA MAGIE DES CHAMPIGNONS-LES CRUCIFÈRES, POUR FAIRE UNE CROIX SUR LE CANCER-LE CHOCOLAT NOIR, NOURRITURE DES DIEUX-LA PÊCHE, UN PÉCHÉ MIGNON ANTICANCÉREUX-LES AGRUMES, UN ZESTE DE MOLÉCULES ANTICANCÉREUSES-PÂTÉ CHINOIS AUX LENTILLES-CURCUMA-HARICOTS NOIRS-</p>
--->
-</strong>
-<p>Je consulte à Ixelles au CENTRE CREYDA - <a href="https://maps.app.goo.gl/G9rRUZm54mv6UwiZ6" class="style1"><strong>Av. Général Médecin Derache 106, 1050 Ixelles</strong></a></p>
-<p><strong>Je suis joignable au 0472/913553 de 8h à 21h</p><strong> 
-<p>ou <a href="mailto:fb799591@skynet.be" class="style1"><strong>ME CONTACTER PAR MAIL</strong></a><br /></p>
+              <div class="space-y-4">
+                <h3 class="font-orbitron text-xl text-purple-300">
+                  Informations importantes :
+                </h3>
+                <ul class="space-y-3">
+                  <li class="flex items-start gap-2">
+                    <span class="text-cyan-400 mt-1">✦</span>
+                    <span
+                      >Pour l'élaboration de chaque travail spécifique un devis
+                      détaillé vous sera remis.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-cyan-400 mt-1">✦</span>
+                    <span
+                      >N'oubliez pas qu'en venant en mon cabinet vous faire du
+                      bien, vous soigner, vous participez au bien-être des
+                      animaux de notre ASBL.</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <span class="text-cyan-400 mt-1">✦</span>
+                    <span
+                      >La totalité des soins prescrits est reversée sur le
+                      compte Holistic pet.</span
+                    >
+                  </li>
+                </ul>
+              </div>
 
-<p>COMPTE ASBL HP & AF -    BE17 0004 3872 3421</p>
+              <div class="mt-6 pt-6 border-t border-slate-700">
+                <p class="text-slate-300">
+                  <strong>COMPTE ASBL HP & AF :</strong><br />
+                  BE17 0004 3872 3421
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
 
-<h1>Articles</h1>
-<h3>Soir Mag</h3>
-<p><img src="./css/img/soirmag/sm1.jpg" alt="Feng" title="Photo-230" class="aligncenter size-medium wp-image-137 vignette_img" /><br />
-<p><img src="./css/img/soirmag/sm2.jpg" alt="Feng" title="Photo-230" class="aligncenter size-medium wp-image-137 vignette_img" /><br />
+      <!-- Section Presse -->
+      <section class="mt-12">
+        <div class="glass-card p-8">
+          <h2 class="font-orbitron text-3xl mb-8 text-center text-cyan-300">
+            Ils parlent de nous
+          </h2>
 
-			</div><!-- .entry-content -->
-</article><!-- #post-12 -->
+          <div class="grid md:grid-cols-2 gap-8">
+            <div class="text-center">
+              <h3 class="font-orbitron text-xl mb-4 text-purple-300">
+                Soir Mag
+              </h3>
+              <div class="neon-border p-2">
+                <img
+                  src="./css/img/soirmag/sm1.jpg"
+                  alt="Article Soir Mag 1"
+                  class="w-full h-auto rounded-lg"
+                />
+              </div>
+            </div>
 
+            <div class="text-center">
+              <h3 class="font-orbitron text-xl mb-4 text-purple-300">
+                Soir Mag
+              </h3>
+              <div class="neon-border p-2">
+                <img
+                  src="./css/img/soirmag/sm2.jpg"
+                  alt="Article Soir Mag 2"
+                  class="w-full h-auto rounded-lg"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-			</div><!-- #content -->
-		</div><!-- #primary .site-content -->
+      <!-- CTA Section -->
+      <section class="mt-12">
+        <div class="glass-card p-8 text-center">
+          <h2 class="font-orbitron text-3xl mb-6 text-cyan-300">
+            Besoin d'aide pour choisir ?
+          </h2>
 
-			<div class="ribbon-left"></div>
-	<div class="blackbar">
-	<nav role="navigation" id="nav-below" class="site-navigation paging-navigation">
-		<h1 class="assistive-text">Post navigation</h1>
+          <p class="text-xl mb-8 max-w-2xl mx-auto">
+            N'hésitez pas à me contacter par téléphone pour discuter de vos
+            besoins et trouver le soin qui vous convient le mieux.
+          </p>
 
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a
+              href="tel:0472913553"
+              class="bg-gradient-to-r from-purple-600 to-cyan-500 text-white font-semibold px-8 py-4 text-lg rounded-full hover:from-purple-700 hover:to-cyan-600 transition-all transform hover:scale-105"
+            >
+              <div class="flex items-center justify-center gap-3">
+                <span>📞</span>
+                <span>Appeler maintenant</span>
+              </div>
+            </a>
 
-	</nav><!-- #nav-below -->
-	</div><!-- .blackbar -->
-	<div class="ribbon-right"></div>
-		</div><!-- #main -->
+            <a
+              href="mailto:fb799591@skynet.be"
+              class="glass-card px-8 py-4 text-lg font-semibold hover:scale-105 transition-transform"
+            >
+              <div class="flex items-center justify-center gap-3">
+                <span>✉️</span>
+                <span>Envoyer un email</span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
 
-	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="site-info">
+    <!-- Footer -->
+    <footer class="glass-panel mt-20 border-t border-slate-800">
+      <div class="container mx-auto px-4 py-8">
+        <div class="grid md:grid-cols-3 gap-8">
+          <!-- Copyright -->
+          <div class="text-center md:text-left">
+            <div
+              class="flex items-center justify-center md:justify-start gap-3 mb-4"
+            >
+              <img
+                src="./css/img/cameraicon.png"
+                alt="Vintage Camera Theme"
+                class="w-8 h-8"
+              />
+              <img
+                src="./css/img/copyright.png"
+                alt="Copyright"
+                class="w-8 h-8"
+              />
+            </div>
+            <p class="text-slate-400">
+              © 2012 - 2024 Medium Yoga Reiki Magnetiseuse Energéticienne
+            </p>
+          </div>
 
-						<a href="http://www.carolinemoore.net" target="_blank" title="Vintage Camera Theme by Caroline Moore"><img src="./css/img/cameraicon.png" alt="Vintage Camera Theme by Caroline Moore" /></a>
-		<img src="./css/img/copyright.png" alt="Copyright 2012 Pension chiens" title="Copyright 2012 Pension chiens" />
-		<a href="http://www.wordpress.org" target="_blank" title="Powered by WordPress">
-		</div><!-- .site-info -->
-	</footer><!-- .site-footer .site-footer -->
-</div><!-- #page .hfeed .site -->
+          <!-- Navigation rapide -->
+          <div class="text-center">
+            <h4 class="font-orbitron text-lg mb-4 text-cyan-300">Navigation</h4>
+            <div class="flex flex-col gap-2">
+              <a
+                href="index.html"
+                class="text-slate-400 hover:text-cyan-300 transition-colors"
+                >Accueil</a
+              >
+              <a
+                href="qui-suis-je.html"
+                class="text-slate-400 hover:text-cyan-300 transition-colors"
+                >Qui suis-je ?</a
+              >
+              <a
+                href="la-pension.html"
+                class="text-slate-400 hover:text-cyan-300 transition-colors"
+                >Soins holistiques</a
+              >
+              <a
+                href="la-parenthese.html"
+                class="text-slate-400 hover:text-cyan-300 transition-colors"
+                >La Parenthese</a
+              >
+              <a
+                href="reglementation.html"
+                class="text-slate-400 hover:text-cyan-300 transition-colors"
+                >Contact</a
+              >
+            </div>
+          </div>
 
-	<div id="footer_nav" class="navbar">
-		<nav role="navigation" class="site-navigation main-navigation">
-			<h1 class="assistive-text">Menu</h1>
-			<div class="assistive-text skip-link"><a href="#content" title="Skip to content">Skip to content</a></div>
-			<div id="header-menu" class="menu-main_menu-container"><ul id="menu-main_menu-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-18"><a href="http://localhost:8888/">Accueil</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-17"><a href="http://localhost:8888/qui-suis-je/">Qui suis-je ?</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-67"><a href="http://localhost:8888/la-pension/">La pension</a></li>
-<li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-12 current_page_item menu-item-14"><a href="http://localhost:8888/reglementreservation/">Règlement/réservation</a></li>
-</ul></div>			<div class="searchbar">
-					<form method="get" id="searchform" action="http://localhost:8888/" role="search">
-		<label for="s" class="assistive-text">Search</label>
-		<input type="text" class="field" name="s" id="s" placeholder="Search &hellip;" />
-		<input type="submit" class="submit" name="submit" id="searchsubmit" value="Go" />
-	</form>			</div>
-		</nav>
-	</div>
+          <!-- Contact -->
+          <div class="text-center md:text-right">
+            <h4 class="font-orbitron text-lg mb-4 text-cyan-300">Contact</h4>
+            <p class="text-slate-400 mb-2">0472/913553</p>
+            <p class="text-slate-400">8h à 21h</p>
+          </div>
+        </div>
 
-<script type='text/javascript' src='http://localhost:8888/wp-content/themes/vintage-camera/js/small-menu.js?ver=20120206'></script>
+        <!-- Powered by -->
+        <div class="text-center mt-8 pt-8 border-t border-slate-800">
+          <p class="text-slate-500 text-sm">
+            © 2025 voyante medium. Tous droits réservés.designed by
+            <a href="https://maxsolving.com/" target="_blank">
+              maxsolving.com</a
+            >
+          </p>
+        </div>
+      </div>
+    </footer>
 
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
-
-</body>
+    <!-- Scripts -->
+    <script src="./js/main.js"></script>
+    <script type="text/javascript">
+      // Initialisation Calendly
+      window.onload = function () {
+        Calendly.initBadgeWidget({
+          url: "https://calendly.com/votre-lien",
+          text: "Prendre rendez-vous",
+          color: "#8b5cf6",
+          textColor: "#ffffff",
+          branding: true,
+        });
+      };
+    </script>
+  </body>
 </html>
