@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="keywords" content="
+<?php
+if (isset($_GET["page"])) {
+    // connection
+	$c = mysql_connect("localhost","phptest","phptest");
+	mysql_select_db("phptest",$c);
+	//requete
+	$resultat = mysql_query("select titre,contenu,keywords from site where numero='".$_GET["page"]."'",$c);
+	//boucle
+	while ($ligne = mysql_fetch_assoc($resultat)) {
+		$contenu = '<h2>'.$ligne["titre"].'</h2>';
+		$contenu .= ''.utf8_encode($ligne["contenu"]).'';
+		echo $ligne["keywords"];
+	} 
+	//fermeture de connection
+	mysql_close($c);
+	}
+
+
+?>
+" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Untitled Document</title>
+<style type="text/css">
+<!--
+.style1 {color: #FFFFFF}
+.style2 {font-size: small}
+td {vertical-align:top;}
+-->
+</style>
+</head>
+
+<body>
+<table width="80%" border="0">
+  <tr>
+    <td colspan="3" bgcolor="#0000FF"><div align="center">
+      <h1><span class="style1">Mon site par CMS</span></h1>
+    </div></td>
+  </tr>
+  <tr>
+    <td width="20%" rowspan="2" bgcolor="#00FF00"><h3>Menu</h3>
+    <?php 
+	// connection
+	$c = mysql_connect("localhost","phptest","phptest");
+	mysql_select_db("phptest",$c);
+	//requete
+	$resultat = mysql_query("select numero,titre from site",$c);
+	//boucle
+	while ($ligne = mysql_fetch_assoc($resultat)) {
+		echo '<a href="?page='.$ligne["numero"].'">'.$ligne["titre"].'</a> <br/>';
+	} 
+	//fermeture de connection
+	mysql_close($c);
+	?></td>
+    <td width="60%" height="527"><?php
+	if (isset($_GET["page"])) {
+	/*
+    // connection
+	$c = mysql_connect("localhost","phptest","phptest");
+	mysql_select_db("phptest",$c);
+	//requete
+	$resultat = mysql_query("select titre,contenu from site where numero='".$_GET["page"]."'",$c);
+	//boucle
+	while ($ligne = mysql_fetch_assoc($resultat)) {
+		echo '<h2>'.$ligne["titre"].'</h2>';
+		echo ''.utf8_encode($ligne["contenu"]).'';
+	} 
+	//fermeture de connection
+	mysql_close($c);
+	*/
+	echo $contenu;
+	} else echo "Bienvenu sur mon site";
+	?></td>
+    <td width="20%" rowspan="2" bgcolor="#FF0000"><?php 
+	/*if (isset($_GET["titre"])) {
+    // connection
+	$c = mysql_connect("localhost","phptest","phptest");
+	mysql_select_db("phptest",$c);
+	//requete
+	$resultat = mysql_query("select banner from site where titre='".$_GET["titre"]."' and banner is not null",$c);
+	//boucle
+	while ($ligne = mysql_fetch_assoc($resultat)) {
+		echo '<img src="'.$ligne["banner"].'" />';
+	} 
+	//fermeture de connection
+	mysql_close($c);
+	}*/
+	?></td>
+  </tr>
+  <tr>
+    <td height="17" bgcolor="#00FFFF"><div align="right" class="style2">page faite par Jonathan</div></td>
+  </tr>
+</table>
+</body>
+</html>
