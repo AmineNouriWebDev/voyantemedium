@@ -349,3 +349,141 @@ details .content {
 		-webkit-backdrop-filter: blur(8px);
 	}
 }
+/* Correction du défilement horizontal mobile */
+@media (max-width: 768px) {
+
+	/* Empêcher tout débordement horizontal */
+	html,
+	body {
+		max-width: 100%;
+		overflow-x: hidden;
+		position: relative;
+	}
+
+	/* Conteneur principal avec largeur limitée */
+	.container {
+		max-width: 100%;
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	/* Correction spécifique pour la page contact */
+	.mobile-scroll-fix {
+		max-width: 100vw;
+		overflow-x: hidden;
+	}
+
+	/* Correction des cartes de service */
+	.pricing-card {
+		margin-left: 0;
+		margin-right: 0;
+		max-width: 100%;
+	}
+
+	/* Correction des boutons dans les cartes */
+	.pricing-card button {
+		white-space: normal;
+		word-break: break-word;
+		width: 100%;
+		max-width: 100%;
+	}
+
+	/* Correction des images dans la section presse */
+	.neon-border {
+		max-width: 100%;
+		overflow: hidden;
+	}
+
+	.neon-border img {
+		width: 100%;
+		height: auto;
+		max-width: 100%;
+	}
+
+	/* Correction des sections avec flex sur mobile */
+	.flex.flex-col.lg\:flex-row {
+		flex-direction: column;
+		align-items: stretch;
+	}
+
+	/* Correction des marges et paddings excessifs */
+	.glass-card {
+		padding-left: 1rem;
+		padding-right: 1rem;
+	}
+
+	/* Correction spécifique pour les listes à puces */
+	.space-y-6.mobile-scroll-fix>div {
+		margin-left: 0 !important;
+		margin-right: 0 !important;
+		padding-left: 0.5rem;
+		padding-right: 0.5rem;
+	}
+
+	/* Désactiver certains effets qui peuvent causer des problèmes */
+	.hover\\:scale-105 {
+		transform: none !important;
+	}
+
+	/* Forcer le contenu à rester dans les limites */
+	* {
+		max-width: 100vw;
+		box-sizing: border-box;
+	}
+
+	/* Correction pour le conteneur grid */
+	.grid.lg\\:grid-cols-2 {
+		grid-template-columns: 1fr;
+		gap: 1.5rem;
+	}
+}
+
+/* Correction spécifique pour très petits écrans */
+@media (max-width: 480px) {
+
+	/* Réduire encore plus les espacements */
+	.glass-card {
+		padding: 1.5rem !important;
+	}
+
+	/* Ajuster la taille du texte */
+	.text-2xl,
+	.text-3xl {
+		font-size: 1.5rem !important;
+	}
+
+	/* Réduire les marges des éléments flex */
+	.flex.items-center.gap-4 {
+		gap: 1rem !important;
+	}
+
+	/* Correction pour les cartes de prix */
+	.pricing-card .flex-col.lg\\:flex-row {
+		gap: 1rem;
+	}
+
+	.pricing-card .lg\\:text-right {
+		text-align: center !important;
+		width: 100%;
+		margin-top: 1rem;
+	}
+
+	/* Ajuster les images de la presse */
+	.grid.md\\:grid-cols-2 {
+		gap: 1rem !important;
+	}
+}
+
+/* Correction du footer sur mobile */
+@media (max-width: 768px) {
+	footer .grid.md\\:grid-cols-3 {
+		grid-template-columns: 1fr;
+		gap: 2rem;
+		text-align: center !important;
+	}
+
+	footer .md\\:text-left,
+	footer .md\\:text-right {
+		text-align: center !important;
+	}
+}
