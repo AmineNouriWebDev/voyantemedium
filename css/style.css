@@ -287,3 +287,65 @@ details .content {
 		-webkit-overflow-scrolling: touch;
 	}
 }
+/* Styles pour le menu burger */
+#mobile-menu {
+	overflow-y: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+#mobile-menu a {
+	position: relative;
+	overflow: hidden;
+}
+
+#mobile-menu a::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	width: 0;
+	height: 2px;
+	background: linear-gradient(90deg, #8b5cf6, #06b6d4);
+	transition: all 0.3s ease;
+	transform: translateX(-50%);
+}
+
+#mobile-menu a:hover::after {
+	width: 100px;
+}
+
+#burger-menu span {
+	transition: all 0.3s ease;
+}
+
+/* Optimisation mobile pour le menu */
+@media (max-width: 1024px) {
+
+	/* Cacher la nav desktop sur tablette */
+	.lg\\:flex {
+		display: none !important;
+	}
+}
+
+/* Animation d'entrée du menu mobile */
+@keyframes slideInFromLeft {
+	from {
+		transform: translateX(-100%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+#mobile-menu.translate-x-0 {
+	animation: slideInFromLeft 0.3s ease-out;
+}
+
+/* Désactiver le backdrop-filter sur mobile pour performance */
+@media (max-width: 1024px) {
+	#mobile-menu {
+		backdrop-filter: blur(8px);
+		-webkit-backdrop-filter: blur(8px);
+	}
+}

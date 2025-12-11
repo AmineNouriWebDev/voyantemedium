@@ -103,3 +103,84 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+// Menu Burger Mobile
+document.addEventListener('DOMContentLoaded', function() {
+  const burgerBtn = document.getElementById('burger-menu');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const body = document.body;
+  let menuOpen = false;
+
+  function toggleMobileMenu() {
+    menuOpen = !menuOpen;
+    
+    if (menuOpen) {
+      // Ouvrir le menu
+      mobileMenu.classList.remove('-translate-x-full');
+      mobileMenu.classList.add('translate-x-0');
+      body.style.overflow = 'hidden'; // Empêcher le scroll
+      
+      // Animation des barres du burger
+      burgerBtn.querySelectorAll('span')[0].style.cssText = `
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(45deg);
+      `;
+      burgerBtn.querySelectorAll('span')[1].style.opacity = '0';
+      burgerBtn.querySelectorAll('span')[2].style.cssText = `
+        top: 50%;
+        transform: translate(-50%, -50%) rotate(-45deg);
+      `;
+    } else {
+      // Fermer le menu
+      mobileMenu.classList.remove('translate-x-0');
+      mobileMenu.classList.add('-translate-x-full');
+      body.style.overflow = ''; // Rétablir le scroll
+      
+      // Réinitialiser les barres du burger
+      burgerBtn.querySelectorAll('span')[0].style.cssText = `
+        top: 30%;
+        transform: translateX(-50%);
+      `;
+      burgerBtn.querySelectorAll('span')[1].style.opacity = '1';
+      burgerBtn.querySelectorAll('span')[2].style.cssText = `
+        top: 70%;
+        transform: translateX(-50%);
+      `;
+    }
+  }
+
+  function closeMobileMenu() {
+    if (menuOpen) {
+      toggleMobileMenu();
+    }
+  }
+
+  // Événements
+  burgerBtn.addEventListener('click', toggleMobileMenu);
+  
+  // Fermer le menu en cliquant en dehors
+  mobileMenu.addEventListener('click', function(e) {
+    if (e.target === mobileMenu) {
+      closeMobileMenu();
+    }
+  });
+
+  // Fermer le menu avec la touche Échap
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && menuOpen) {
+      closeMobileMenu();
+    }
+  });
+
+  // Ajuster la hauteur du menu mobile
+  function adjustMobileMenuHeight() {
+    const navHeight = document.querySelector('nav').offsetHeight;
+    mobileMenu.style.top = `${navHeight}px`;
+    mobileMenu.style.height = `calc(100vh - ${navHeight}px)`;
+  }
+
+  window.addEventListener('resize', adjustMobileMenuHeight);
+  adjustMobileMenuHeight(); // Initialisation
+  
+  // Fonction globale pour fermer le menu (utilisée dans les liens HTML)
+  window.closeMobileMenu = closeMobileMenu;
+});
