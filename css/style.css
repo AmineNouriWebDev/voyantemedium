@@ -245,3 +245,45 @@ details .content {
 .fade-in.visible {
 	opacity: 1;
 }
+
+
+/* Correction pour les problèmes de performance mobile */
+@media (max-width: 768px) {
+
+	/* Désactiver les effets lourds sur mobile */
+	.glass-card,
+	.glass-panel {
+		backdrop-filter: none;
+		-webkit-backdrop-filter: none;
+		background: rgba(15, 23, 42, 0.9);
+		/* Version plus opaque sans blur */
+	}
+
+	/* Désactiver certaines animations sur mobile */
+	.float-animation,
+	.pulse-glow {
+		animation: none;
+	}
+
+	/* Optimiser le rendu des transitions */
+	.glass-card,
+	.vignette_img {
+		transition: none;
+		transform: none;
+	}
+
+	/* Désactiver les effets au survol sur mobile */
+	.glass-card:hover,
+	.vignette_img:hover {
+		border-color: rgba(139, 92, 246, 0.2);
+		box-shadow: none;
+		transform: none;
+	}
+
+	/* Optimiser les sections très longues */
+	#reiki .glass-card {
+		max-height: 80vh;
+		overflow-y: auto;
+		-webkit-overflow-scrolling: touch;
+	}
+}
