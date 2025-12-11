@@ -137,20 +137,298 @@
         <section>
           <div class="glass-card p-6 h-full">
             <h2 class="font-orbitron text-3xl mb-6 text-cyan-300">
-              Réserver en ligne
+              Services La Parenthèse
             </h2>
 
-            <p class="text-lg mb-6">
-              Sélectionnez le type de consultation qui vous convient et
-              choisissez un créneau disponible directement en ligne.
+            <p class="text-lg mb-8">
+              Découvrez nos prestations spécialisées en digipuncture, magnétisme
+              manuel et médiumnité. Choisissez le service qui vous correspond et
+              réservez directement en ligne.
             </p>
 
-            <!-- Widget Calendly -->
-            <div
-              class="calendly-inline-widget"
-              data-url="https://calendly.com/votre-lien"
-              style="min-height: 700px"
-            ></div>
+            <!-- Liste verticale des 5 services -->
+            <div class="space-y-6">
+              <!-- Service 1 - Digipuncture relaxation -->
+              <div
+                class="glass-card p-6 pricing-card hover:bg-slate-800/30 transition-all duration-300"
+              >
+                <div
+                  class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4"
+                >
+                  <!-- Info service -->
+                  <div class="flex-1">
+                    <div class="flex items-center gap-4 mb-3">
+                      <div
+                        class="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-600 to-cyan-700 flex items-center justify-center flex-shrink-0"
+                      >
+                        <span class="text-white text-xl">🌿</span>
+                      </div>
+                      <div>
+                        <h3 class="font-orbitron text-xl text-cyan-300">
+                          Digipuncture relaxation
+                        </h3>
+                        <p class="text-slate-300">
+                          45 minutes • Séance de digipuncture relaxante
+                        </p>
+                      </div>
+                    </div>
+                    <ul class="space-y-1 ml-16">
+                      <li class="flex items-center gap-2 text-slate-300">
+                        <span class="text-cyan-400">✦</span>
+                        <span>Séance express pour une détente rapide</span>
+                      </li>
+                      <li class="flex items-center gap-2 text-slate-300">
+                        <span class="text-cyan-400">✦</span>
+                        <span>Techniques de digitopression douce</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Prix et bouton -->
+                  <div
+                    class="lg:text-right flex lg:flex-col items-center lg:items-end justify-between lg:justify-center gap-4"
+                  >
+                    <div>
+                      <p class="text-3xl font-bold text-white mb-1">45€</p>
+                      <p class="text-sm text-slate-300">Pour 45 min</p>
+                    </div>
+                    <button
+                      onclick="Calendly.initPopupWidget({url: 'https://calendly.com/nickyiemannequinbelge/digipuncture-relaxation'})"
+                      class="bg-gradient-to-r from-cyan-600 to-cyan-700 text-white py-2 px-6 rounded-lg hover:from-cyan-700 hover:to-cyan-800 transition-all whitespace-nowrap"
+                    >
+                      Réserver
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 2 - Magnétisme manuel complète -->
+              <div
+                class="glass-card p-6 pricing-card hover:bg-slate-800/30 transition-all duration-300"
+              >
+                <div
+                  class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4"
+                >
+                  <!-- Info service -->
+                  <div class="flex-1">
+                    <div class="flex items-center gap-4 mb-3">
+                      <div
+                        class="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-purple-700 flex items-center justify-center flex-shrink-0"
+                      >
+                        <span class="text-white text-xl">✨</span>
+                      </div>
+                      <div>
+                        <h3 class="font-orbitron text-xl text-purple-300">
+                          Magnétisme manuel
+                        </h3>
+                        <p class="text-slate-300">
+                          60 minutes • Soin énergétique complet
+                        </p>
+                      </div>
+                    </div>
+                    <ul class="space-y-1 ml-16">
+                      <li class="flex items-center gap-2 text-slate-300">
+                        <span class="text-purple-400">✦</span>
+                        <span>Magnétisme thérapeutique manuel</span>
+                      </li>
+                      <li class="flex items-center gap-2 text-slate-300">
+                        <span class="text-purple-400">✦</span>
+                        <span>Rééquilibrage énergétique profond</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Prix et bouton -->
+                  <div
+                    class="lg:text-right flex lg:flex-col items-center lg:items-end justify-between lg:justify-center gap-4"
+                  >
+                    <div>
+                      <p class="text-3xl font-bold text-white mb-1">60€</p>
+                      <p class="text-sm text-slate-300">Pour 60 min</p>
+                    </div>
+                    <button
+                      onclick="Calendly.initPopupWidget({url: 'https://calendly.com/nickyiemannequinbelge/magnetisme-manuel-complete'})"
+                      class="bg-gradient-to-r from-purple-600 to-purple-700 text-white py-2 px-6 rounded-lg hover:from-purple-700 hover:to-purple-800 transition-all whitespace-nowrap"
+                    >
+                      Réserver
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 3 - Palper rouler intensive -->
+              <div
+                class="glass-card p-6 pricing-card hover:bg-slate-800/30 transition-all duration-300"
+              >
+                <div
+                  class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4"
+                >
+                  <!-- Info service -->
+                  <div class="flex-1">
+                    <div class="flex items-center gap-4 mb-3">
+                      <div
+                        class="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-600 to-purple-600 flex items-center justify-center flex-shrink-0"
+                      >
+                        <span class="text-white text-xl">💆</span>
+                      </div>
+                      <div>
+                        <h3 class="font-orbitron text-xl text-cyan-300">
+                          Palper rouler intensif
+                        </h3>
+                        <p class="text-slate-300">
+                          90 minutes • Technique de massage intensive
+                        </p>
+                      </div>
+                    </div>
+                    <ul class="space-y-1 ml-16">
+                      <li class="flex items-center gap-2 text-slate-300">
+                        <span class="text-cyan-400">✦</span>
+                        <span>Technique de palper-rouler avancée</span>
+                      </li>
+                      <li class="flex items-center gap-2 text-slate-300">
+                        <span class="text-cyan-400">✦</span>
+                        <span>Détente musculaire profonde et totale</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Prix et bouton -->
+                  <div
+                    class="lg:text-right flex lg:flex-col items-center lg:items-end justify-between lg:justify-center gap-4"
+                  >
+                    <div>
+                      <p class="text-3xl font-bold text-white mb-1">90€</p>
+                      <p class="text-sm text-slate-300">Pour 90 min</p>
+                    </div>
+                    <button
+                      onclick="Calendly.initPopupWidget({url: 'https://calendly.com/nickyiemannequinbelge/palper-rouler-intensive'})"
+                      class="bg-gradient-to-r from-cyan-600 to-purple-600 text-white py-2 px-6 rounded-lg hover:from-cyan-700 hover:to-purple-700 transition-all whitespace-nowrap"
+                    >
+                      Réserver
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 4 - Digipuncture premium -->
+              <div
+                class="glass-card p-6 pricing-card hover:bg-slate-800/30 transition-all duration-300"
+              >
+                <div
+                  class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4"
+                >
+                  <!-- Info service -->
+                  <div class="flex-1">
+                    <div class="flex items-center gap-4 mb-3">
+                      <div
+                        class="w-12 h-12 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 flex items-center justify-center flex-shrink-0"
+                      >
+                        <span class="text-white text-xl">🌟</span>
+                      </div>
+                      <div>
+                        <h3 class="font-orbitron text-xl text-purple-300">
+                          Digipuncture premium
+                        </h3>
+                        <p class="text-slate-300">
+                          2 heures • Expérience ultime de digitopression
+                        </p>
+                      </div>
+                    </div>
+                    <ul class="space-y-1 ml-16">
+                      <li class="flex items-center gap-2 text-slate-300">
+                        <span class="text-purple-400">✦</span>
+                        <span>Séance complète de digipuncture avancée</span>
+                      </li>
+                      <li class="flex items-center gap-2 text-slate-300">
+                        <span class="text-purple-400">✦</span>
+                        <span
+                          >Techniques premium pour une expérience ultime</span
+                        >
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Prix et bouton -->
+                  <div
+                    class="lg:text-right flex lg:flex-col items-center lg:items-end justify-between lg:justify-center gap-4"
+                  >
+                    <div>
+                      <p class="text-3xl font-bold text-white mb-1">150€</p>
+                      <p class="text-sm text-slate-300">Pour 2 heures</p>
+                    </div>
+                    <button
+                      onclick="Calendly.initPopupWidget({url: 'https://calendly.com/nickyiemannequinbelge/digipuncture-premium'})"
+                      class="bg-gradient-to-r from-purple-600 to-pink-600 text-white py-2 px-6 rounded-lg hover:from-purple-700 hover:to-pink-700 transition-all whitespace-nowrap"
+                    >
+                      Réserver
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Service 5 - Séance de Médiumnité -->
+              <div
+                class="glass-card p-6 pricing-card hover:bg-slate-800/30 transition-all duration-300"
+              >
+                <div
+                  class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-4"
+                >
+                  <!-- Info service -->
+                  <div class="flex-1">
+                    <div class="flex items-center gap-4 mb-3">
+                      <div
+                        class="w-12 h-12 rounded-full bg-gradient-to-r from-cyan-500 to-purple-500 flex items-center justify-center flex-shrink-0"
+                      >
+                        <span class="text-white text-xl">🔮</span>
+                      </div>
+                      <div>
+                        <h3 class="font-orbitron text-xl text-cyan-300">
+                          Séance de Médiumnité
+                        </h3>
+                        <p class="text-slate-300">
+                          60 minutes • Consultation de voyance médiumnitée
+                        </p>
+                      </div>
+                    </div>
+                    <ul class="space-y-1 ml-16">
+                      <li class="flex items-center gap-2 text-slate-300">
+                        <span class="text-cyan-400">✦</span>
+                        <span>Guidance spirituelle personnalisée</span>
+                      </li>
+                      <li class="flex items-center gap-2 text-slate-300">
+                        <span class="text-cyan-400">✦</span>
+                        <span>Communication intuitive et messages</span>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <!-- Prix et bouton -->
+                  <div
+                    class="lg:text-right flex lg:flex-col items-center lg:items-end justify-between lg:justify-center gap-4"
+                  >
+                    <div>
+                      <p class="text-3xl font-bold text-white mb-1">50€</p>
+                      <p class="text-sm text-slate-300">Pour 60 min</p>
+                    </div>
+                    <button
+                      onclick="Calendly.initPopupWidget({url: 'https://calendly.com/nickyiemannequinbelge/seance-de-mediumnite'})"
+                      class="bg-gradient-to-r from-cyan-500 to-purple-500 text-white py-2 px-6 rounded-lg hover:from-cyan-600 hover:to-purple-600 transition-all whitespace-nowrap"
+                    >
+                      Réserver
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Note d'information -->
+            <div class="mt-8 pt-6 border-t border-slate-700">
+              <p class="text-slate-300 text-sm">
+                <span class="text-cyan-300">💡 Note :</span>
+                Tous les rendez-vous sont confirmés par email. Pour toute
+                annulation, merci de prévenir au moins 24h à l'avance.
+              </p>
+            </div>
           </div>
         </section>
 
@@ -450,17 +728,5 @@
 
     <!-- Scripts -->
     <script src="./js/main.js"></script>
-    <script type="text/javascript">
-      // Initialisation Calendly
-      window.onload = function () {
-        Calendly.initBadgeWidget({
-          url: "https://calendly.com/votre-lien",
-          text: "Prendre rendez-vous",
-          color: "#8b5cf6",
-          textColor: "#ffffff",
-          branding: true,
-        });
-      };
-    </script>
   </body>
 </html>
