@@ -487,3 +487,17 @@ details .content {
 		text-align: center !important;
 	}
 }
+/* Badge Nouveau Service */
+.badge-nouveau {
+	position: absolute;
+	top: -8px;
+	right: -8px;
+	background: linear-gradient(45deg, #10b981, #34d399);
+	color: white;
+	font-size: 0.7rem;
+	font-weight: bold;
+	padding: 0.25rem 0.75rem;
+	border-radius: 9999px;
+	z-index: 10;
+	animation: pulse-glow 2s ease-in-out infinite;
+}
